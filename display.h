@@ -1,13 +1,4 @@
 
-void             display_entries    (struct options*, struct file*);
-struct metadata *generate_metadata  (struct options*, struct file*);
-void             display_long_format(struct options*, struct file*,
-                                     struct metadata*, struct max_metadata*);
-void             display_singleline (struct options*, struct file*,
-                                     struct metadata*, struct max_metadata*);
-void             display_default    (struct options*, struct file*,
-                                     struct metadata*, struct max_metadata*);
-
 void display_entries(struct options *options, struct file *files) {
 	int length;
 	struct metadata *metadata;
