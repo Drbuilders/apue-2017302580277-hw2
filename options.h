@@ -56,75 +56,24 @@ struct options *parse_argv(int *argc, char **argv) {
 				options->PLAINFILE_DIRECTORIES = 1;
 				options->RECURSIVELY_LIST_SUBDIRECTORIES = 0;
 				break;
-			case 'F':
-				options->APPEND_FILETYPE_DESCRIPTOR = 1;
-				break;
-			case 'f':
-				options->DISABLE_SORTING = 1;
-				break;
-			case 'h':
-				options->HUMAN_READABLE_SIZE = 1;
-				options->DISPLAY_SIZE_KILOBYTES = 0;
-				break;
-			case 'i':
-				options->DISPLAY_FILE_SERIAL_NUMBER = 1;
-				break;
-			case 'k':
-				options->DISPLAY_SIZE_KILOBYTES = 1;
-				options->HUMAN_READABLE_SIZE = 0;
-				break;
 			case 'l':
 				options->DISPLAY_LONG_FORMAT = 1;
 				options->SINGLE_ENTRY_PER_LINE = 0;
 				options->FORCE_MULTICOLUMN_OUTPUT = 0;
 				options->SORT_MULTICOLUMN_OUTPUT_ACROSS = 0;
 				break;
-			case 'n':
-				options->NUMERIC_UID_GID = 1;
-				options->DISPLAY_LONG_FORMAT = 1;
-				break;
-			case 'q':
-				options->HUMAN_READABLE_NONPRINTABLE_CHARACTERS = 1;
-				options->FORCE_NONPRINTABLE_CHARACTERS = 0;
-				break;
-			case 'R':
-				options->RECURSIVELY_LIST_SUBDIRECTORIES = 1;
-				options->PLAINFILE_DIRECTORIES = 0;
-				break;
-			case 'r':
-				options->REVERSE_SORT_ORDER = 1;
-				break;
-			case 'S':
-				options->SORT_BY_SIZE_DESCENDING = 1;
-				break;
 			case 's':
 				options->DISPLAY_BLOCKS_USED = 1;
-				break;
-			case 't':
-				options->USE_LAST_MODIFIED_TIME = 1;
-				break;
-			case 'u':
-				options->USE_LAST_ACCESS_TIME = 1;
-				options->USE_LAST_FILE_STATUS_TIME = 0;
 				break;
 			case 'w':
 				options->FORCE_NONPRINTABLE_CHARACTERS = 1;
 				options->HUMAN_READABLE_NONPRINTABLE_CHARACTERS = 0;
-				break;
-			case 'x':
-				break;
-			case '1':
-				options->SINGLE_ENTRY_PER_LINE = 1;
-				options->FORCE_MULTICOLUMN_OUTPUT = 0;
-				options->DISPLAY_LONG_FORMAT = 0;
-				options->SORT_MULTICOLUMN_OUTPUT_ACROSS = 0;
 				break;
 			default:
 			case '?':
 				exit(EXIT_FAILURE);
 		}
 	}
-	
 	remove_options(argc, argv);
 	return options;
 }
