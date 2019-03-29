@@ -146,7 +146,7 @@ void display_long_format(struct options *options, struct file *files,
 			max_group_id = 0;
 		}
 		
-		printf("%s%s %s %s%s %s%s %s %s %s%s%s\n",
+		printf("%s%s \n",
 			padding_left(blocksize, max_blocksize),
 			padding_left(filemode, max_filemode),
 			padding_left(links, max_links),
